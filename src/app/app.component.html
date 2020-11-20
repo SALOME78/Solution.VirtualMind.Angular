@@ -1,0 +1,86 @@
+<div class="page-wrapper chiller-theme toggled">
+
+    <!-- Navigation -->
+    <!--bg-dark-->
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark fondoNavBar">
+      <a class="navbar-brand" href="#">App - Currency Purchases</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <div id="close-sidebar">
+              <i class="fas fa-times"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- /.navbar-header -->
+    <a id="show-sidebar" class="btn btn-sm btn-dark">
+      <i class="fas fa-bars"></i>
+    </a>
+    <nav id="sidebar" class="sidebar-wrapper">
+      <div class="sidebar-content">
+        <div class="sidebar-brand">
+          <a href="#">Test</a>
+          <div id="close-sidebar">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+        <div class="sidebar-header">
+          <div class="user-pic">
+            <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+                 alt="User picture">
+          </div>
+          <div class="user-info">
+            <span class="user-name">
+              General
+              <strong>User</strong>
+            </span>
+            <span class="user-role">Administrator</span>
+            <span class="user-status">
+              <i class="fa fa-circle"></i>
+              <span>Online</span>
+            </span>
+          </div>
+        </div>
+        <div class="sidebar-menu">
+          <ul>
+            <li class="header-menu">
+              <span>General</span>
+            </li>
+            <li [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+              <a href="#" [routerLink]='["/"]'>
+                <i class="fa fa-bars"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li [routerLinkActive]='["link-active"]'>
+              <a href="#" [routerLink]='["/exchangeRateRetrieve"]'>
+                <i class="fa fa-calendar"></i>
+                <span>Exchange Currency</span>
+              </a>
+            </li>
+            <li [routerLinkActive]='["link-active"]'>
+              <a href="#" [routerLink]='["/currencyPurchaseList"]'>
+                <i class="fa fa-folder"></i>
+                <span>Currency Purchase</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- sidebar-menu  -->
+      </div>
+      <!-- sidebar-content  -->
+    </nav>
+    <!-- sidebar-wrapper  -->
+    <main class="page-content">
+      <div class="container-fluid">
+        <router-outlet></router-outlet>
+      </div>
+    </main>
+    <!-- page-content" -->
+  </div>
+
